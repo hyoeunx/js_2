@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Neo Culture Technology</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <button class="btn" onclick="login()">로그인</button>
+    <div id="login" class="show"></div>
+
+    <div id="main">
+        
+
+        <h1>NCT</h1>
+        <div class="box">
+            <div class="fav">
+                <h2>최차삼애 등록하기</h2>
+                <form>
+                    <input type="text" id="mname">
+                    <button class="btn" onclick="check()">확인</button>
+                </form>
+                <div id="membername" class="show"></div>
+            </div>
+            <div class="song">
+                <h2>내가 좋아하는 엔시티 노래는?</h2>
+                <div class="songbtn">
+                    <button class="btn" onclick="showSong()">추가</button>
+                    <div id="song" class="showSong"></div>
+                </div>
+                
+                
+            </div>
+
+            <div class="js-dday">
+                <h1>엔시티 입덕일 계산기 </h1>
+                <h3>엔시티와 만난지 </h3>
+                <p id="accent">일</p>
+                <input id="input_date" type="date">
+                <input id="input_submit" type="submit" onclick="input()" value>
+            </div>
+            
+            <br>
+            <div class="member">
+                <img src="https://kin-phinf.pstatic.net/20220202_9/1643741360370MQqiz_JPEG/20211212_005445.jpg?type=w750">
+                <h4>태일 쟈니 태용 유타 쿤 도영 텐 재현 윈윈</h4>
+                <h4><a href="https://namu.wiki/w/%EC%A0%95%EC%9A%B0(NCT)">정우</a> 루카스 마크 샤오쥔 헨드리 런쥔 제노</h4>
+                <h4>해찬 재민 양양 쇼타로 성찬 천러 지성</h4>
+                <br>
+            </div>
+            <div class="info">
+                <table>
+                    <tr>
+                        <td colspan="2">Neo Cultrue Technology</td>
+                    </tr>
+                    <tr>
+                        <td>유닛</td>
+                        <th><a href="https://namu.wiki/w/NCT%20U">NCT U</a>, <a href="https://namu.wiki/w/NCT%20127">NCT
+                                127</a>, <a href="https://namu.wiki/w/NCT%20DREAM">NCT DREAM</a>, <a
+                                href="https://namu.wiki/w/WayV">WayV</a></th>
+                    </tr>
+                    <tr>
+                        <td>데뷔일</td>
+                        <th>2016년 4월 9일</th>
+                    </tr>
+                    <tr>
+                        <td>데뷔 음반</td>
+                        <th>NCT 2018 EMPATHY</th>
+                    </tr>
+                    <tr>
+                        <td>장르</td>
+                        <th>댄스, 발라드, 랩/힙합, R&B</th>
+                    </tr>
+                    <tr>
+                        <td>소속사</td>
+                        <th>SM엔터테인먼트</th>
+                    </tr>
+                    <tr>
+                        <td>팬덤</td>
+                        <th>NCTzen</th>
+                    </tr>
+                    <tr>
+                        <td>공식 색</td>
+                        <th>PEARL NEO CHAMPAGNE</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+<script>
+    function login() {
+        var name = prompt("로그인", "이름을 입력하세요");
+        document.querySelector("#login").innerHTML = "To the world 여기는 NCT! " + name + "님, 안녕하세요. NCT입니다!";
+    }
+    function check() {
+        var form = document.getElementById("mname");
+        document.getElementById('mname');
+    }
+    function showSong() {
+        var song = prompt("가장 좋아하는 노래가 뭔가요?", "노래를 입력하세요");
+        document.querySelector("#song").innerHTML = song;
+    }
+    const now = new Date();
+    function input() {
+        const dday = new Date(document.querySelector("#input_date").value);
+        const passedTime = now.getTime()-dday.getTime();
+        const passedDay = Math.round(passedTime/(24*60*60*1000));
+        document.querySelector("#accent").innerHTML = passedDay+"일";
+    }
+    
+</script>
+
+</html>

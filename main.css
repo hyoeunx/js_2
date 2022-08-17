@@ -1,0 +1,80 @@
+#main {
+    position:relative;
+}
+h1 {
+    color:#bbe309;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.box {
+    text-align: center;
+    margin:0 auto;
+    background-color:#bbe309;
+    display:block;
+    position:absolute;
+    width:100%;
+    
+}
+img {
+    width:40%;
+    padding:10px;
+}
+table {
+    margin:auto;
+    border:1px solid;
+    border-collapse: collapse;
+    padding:10px;
+    
+}
+th, td {
+    border:1px solid #444444;
+    padding:10px;
+    margin:0 auto;
+
+}
+td {
+    background-color:black;
+    color:#bbe309;
+}
+.show {
+    font-size:20px;
+    text-align: center;
+    padding: 20px;
+    margin : 0 auto;
+    display:block;
+}
+.btn {
+    float:right;
+    margin:0 auto;
+    padding : 10px;
+    position:relative;
+}
+.fav {
+    display:block;
+    position:absolute;
+}
+form input {
+    padding : 10px;
+}
+form {
+    margin : 0 auto;
+    padding : 10px;
+}
+.showSong {
+    float:right;
+    padding:10px;
+}
+.song {
+    display: block;
+    position:absolute;
+    width: 100%;
+}
+.song h2 {
+    float:right;
+}
+.songbtn {
+    float:right;
+    width:100%;
+}
