@@ -45,6 +45,12 @@
             <br>
             <div class="member">
                 <img src="https://kin-phinf.pstatic.net/20220202_9/1643741360370MQqiz_JPEG/20211212_005445.jpg?type=w750">
+                <button class="over" id="open"onclick="showDetail()">상세설명 보기</button>
+                <div id="desc" class="detail">
+                    <h4>엔시티</h4>
+                    <p>NCT는 SM엔터테인먼트 소속의 23인조 다국적 보이그룹이다.</p>
+                <button id="close" onclick="hideDetail()">상세 설명 닫기</button>
+                </div>
                 <h4>태일 쟈니 태용 유타 쿤 도영 텐 재현 윈윈</h4>
                 <h4><a href="https://namu.wiki/w/%EC%A0%95%EC%9A%B0(NCT)">정우</a> 루카스 마크 샤오쥔 헨드리 런쥔 제노</h4>
                 <h4>해찬 재민 양양 쇼타로 성찬 천러 지성</h4>
@@ -112,6 +118,18 @@
         const passedDay = Math.round(passedTime/(24*60*60*1000));
         document.querySelector("#accent").innerHTML = passedDay+"일";
     }
+    let $dscDiv =document.getElementById("desc");
+            let $openBtn =document.getElementById("open");
+           let $colseBtn =document.getElementById("close");
+        function showDetail(){
+            $dscDiv.style.display="block";
+            $openBtn.style.display="none";
+        }
+            function hideDetail(){
+                  $dscDiv.style.display="none";
+                  $openBtn.style.display="block";
+        }
+           $closeBtn.addEventListener("click");
     
 </script>
 
